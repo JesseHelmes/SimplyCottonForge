@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+
+[[mods]] #mandatory
+modId="simplycottonforge"
+version="1.0"
+displayName="Simply Cotton Forge"
+logoFile="logo.png"
+credits=""
+authors="Silly Silver"
+description='''
+Adds cotton, an easy way to obtain string.
+'''
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"

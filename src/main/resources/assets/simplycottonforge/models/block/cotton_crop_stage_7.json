@@ -1,0 +1,6 @@
+{
+	"parent": "simplycottonforge:block/cross",
+	"textures": {
+		"cross": "simplycottonforge:blocks/cotton_stage_7"
+	}
+}

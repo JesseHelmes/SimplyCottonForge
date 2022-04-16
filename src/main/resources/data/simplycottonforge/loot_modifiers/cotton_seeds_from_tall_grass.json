@@ -1,0 +1,13 @@
+{
+	"type": "simplycottonforge:cotton_seed_drops",
+	"conditions": [
+		{
+			"condition": "minecraft:random_chance",
+			"chance": 0.1
+		},
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "minecraft:blocks/tall_grass"
+		}
+	]
+}
