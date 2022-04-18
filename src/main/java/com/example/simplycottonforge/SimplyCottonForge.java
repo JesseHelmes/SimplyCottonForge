@@ -7,14 +7,8 @@ import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraftforge.common.BasicItemListing;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -49,20 +43,20 @@ public class SimplyCottonForge {
 
 	// Needed a way to get the seeds, I wanted to make them generate in plain farms
 	// dropping the cotton seeds from grass would be cool too!
-	@SubscribeEvent
-	public void addNewTrade(VillagerTradesEvent event) {
-		if (event.getType() == VillagerProfession.FARMER) {
-			event.getTrades().get(1)
-				.add(new BasicItemListing(2, new ItemStack(ItemInit.COTTON_SEEDS.get()), 3, 2));
-		}
-
-		if (event.getType() == VillagerProfession.SHEPHERD) {
-			event.getTrades().get(1)
-				.add(new BasicItemListing(3, new ItemStack(ItemInit.COTTON_BALL.get()), 5, 2));
-			event.getTrades().get(1)
-				.add(new BasicItemListing(new ItemStack(ItemInit.COTTON_BALL.get()), new ItemStack(Items.EMERALD, 3), 2, 2, 1));
-			event.getTrades().get(1)
-			.add(new BasicItemListing(new ItemStack(ItemInit.COTTON_BALL.get()), new ItemStack(Items.EMERALD), 6, 2, 1));
-		}
-	}
+//	@SubscribeEvent
+//	public void addNewTrade(VillagerTradesEvent event) {
+//		if (event.getType() == VillagerProfession.FARMER) {
+//			event.getTrades().get(1)
+//				.add(new BasicItemListing(2, new ItemStack(ItemInit.COTTON_SEEDS.get()), 3, 2));
+//		}
+//
+//		if (event.getType() == VillagerProfession.SHEPHERD) {
+//			event.getTrades().get(1)
+//				.add(new BasicItemListing(3, new ItemStack(ItemInit.COTTON_BALL.get()), 5, 2));
+//			event.getTrades().get(1)
+//				.add(new BasicItemListing(new ItemStack(ItemInit.COTTON_BALL.get()), new ItemStack(Items.EMERALD, 3), 2, 2, 1));
+//			event.getTrades().get(1)
+//			.add(new BasicItemListing(new ItemStack(ItemInit.COTTON_BALL.get()), new ItemStack(Items.EMERALD), 6, 2, 1));
+//		}
+//	}
 }
